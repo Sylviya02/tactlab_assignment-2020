@@ -74,7 +74,7 @@ def create_dictionary(clean_list):
       
     # returns the most occurring elements 
     top = c.most_common(10) 
-    print('Hello') 
+    print(top) 
   
 # Driver code 
 if __name__ == '__main__': 
