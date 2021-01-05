@@ -30,3 +30,22 @@ if __name__=='__main__':
 	most_common=words_count.most_common(10)
 	for word,count in most_common:
 		print(word, str(count) + ' times',sep=": ")
+	url='https://en.wikipedia.org/wiki/GitHub'
+	response=urlopen(url)
+	html=response.read().decode('utf-8',errors='ignore')
+	words_parser=WordsParser()
+	words_parser.feed(html)
+	words_count=collections.Counter(words_parser.common_words)
+	most_common=words_count.most_common(10)
+	for word,count in most_common:
+		print(word)
+	url='https://en.wikipedia.org/wiki/GitHub'
+	response=urlopen(url)
+	html=response.read().decode('utf-8',errors='ignore')
+	words_parser=WordsParser()
+	words_parser.feed(html)
+	words_count=collections.Counter(words_parser.common_words)
+	most_common=words_count.most_common(10)
+	for word,count in most_common:
+		print(word)
+        
